@@ -3,8 +3,8 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
-})->name('home');
+    return view('landingPage');
+})->name('LandingPage');
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
