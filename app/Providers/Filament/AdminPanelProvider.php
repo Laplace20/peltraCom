@@ -28,6 +28,9 @@ class AdminPanelProvider extends PanelProvider
             ->id('admin')
             ->path('admin')
             ->login()
+            ->favicon(asset('images/logoPPeltra.png'))
+            ->brandLogo(asset('images/navLogoFixed.png'))
+            ->brandLogoHeight('3rem')
             ->colors([
                 'primary' => Color::Amber,
             ])
@@ -38,8 +41,7 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\Filament\Widgets')
             ->widgets([
-                AccountWidget::class,
-                FilamentInfoWidget::class,
+                // AccountWidget::class,
             ])
             ->middleware([
                 EncryptCookies::class,
