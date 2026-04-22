@@ -1,7 +1,7 @@
 <x-landingPageLayout>
     <x-slot:title>Home Page</x-slot>
-    <x-newsSection :news="$news" ></x-newsSection>
-    <x-csrSection :activities="$csrActivities"></x-csrSection>
+    <x-aboutSection></x-aboutSection>
+    <x-newsAndCsrSection :news="$news" :activities="$csrActivities"></x-newsAndCsrSection>
     <x-serviceSection :facilities="$facilities" ></x-serviceSection>
     <x-membersSection></x-membersSection>
     

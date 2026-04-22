@@ -1,36 +1,29 @@
 <?php
-use App\Http\Controllers\PublicController;
-use App\Http\Controllers\NewsController;
+
 use App\Http\Controllers\CsrController;
-use App\Models\News;
-use App\Models\Facility;
-use App\Models\CsrActivity;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\NewsController;
 use Illuminate\Support\Facades\Route;
-use App\Models\Legality;
 
-Route::get('/', function () {
-    return view('landingPage', [
-        'facilities' => Facility::all(),
-        'news' => News::where('category', '!=', 'csr')->latestPublished()->take(6)->get(),
-        'csrActivities' => News::where('category', 'csr')->where('is_active', true)->orderBy('date', 'desc')->take(3)->get(),
-    ]);
-})->name('LandingPage');
+/**
+ * Public Routes
+ * These routes are handled by Controllers to keep the logic clean and testable.
+ */
 
+// Home Page
+Route::get('/', [HomeController::class, 'index'])->name('LandingPage');
+
+// CSR Page
 Route::get('/csr', [CsrController::class, 'index'])->name('csr.index');
 
+// News Pages
 Route::get('/news', [NewsController::class, 'index'])->name('news.index');
 Route::get('/news/{slug}', [NewsController::class, 'show'])->name('news.show');
 
-Route::get('/legalitas', function () {
+// Static / Information Pages
+Route::get('/legalitas', [HomeController::class, 'legalitas'])->name('legalitas');
+Route::get('/visi-misi', [HomeController::class, 'visiMisi'])->name('visiMisi');
 
-    $legalities = Legality::where('is_visible', true)->latest()->get();
-
-    return view('legalitasPage', compact('legalities'));
-});
-
-Route::get('/visi-misi', function () {
-    return view('visiMisiPage');
-})->name('visiMisi');
 
 
 

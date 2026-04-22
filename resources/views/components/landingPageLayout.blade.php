@@ -24,7 +24,7 @@
             font-style: italic;
             border-left-width: 4px;
             --tw-border-opacity: 1;
-            border-color: rgb(99 102 241 / var(--tw-border-opacity)); /* indigo-500 */
+            border-color: rgb(99 102 241 / var(--tw-border-opacity)); 
             background-color: rgb(249 250 251 / 1); /* gray-50 */
             padding: 1rem;
             border-radius: 0 0.375rem 0.375rem 0;

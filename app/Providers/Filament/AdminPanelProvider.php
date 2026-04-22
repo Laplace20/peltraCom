@@ -28,6 +28,7 @@ class AdminPanelProvider extends PanelProvider
             ->id('admin')
             ->path('admin')
             ->login()
+            ->passwordReset()
             ->favicon(asset('images/logoPPeltra.png'))
             ->brandLogo(asset('images/navLogoFixed.png'))
             ->brandLogoHeight('3rem')

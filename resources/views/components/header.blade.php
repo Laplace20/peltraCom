@@ -15,17 +15,14 @@
                     <img src="{{ asset('images/LogoPeltra.jpeg') }}" alt="Logo Peltra" class="h-60 w-auto object-cover">
                 </div>
 
-                <div class="mb-8 mt-10 opacity-0 -translate-x-10 transition-all duration-1000 delay-300 ease-out" :class="shown ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'">
+                <!-- <div class="mb-8 mt-10 opacity-0 -translate-x-10 transition-all duration-1000 delay-300 ease-out" :class="shown ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'">
                     <h1 class="text-3xl md:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
                         Wujudkan <span class="text-transparent bg-clip-text bg-gradient-to-r from-gray-600 to-indigo-500">Konektivitas</span><br>
                         Tanpa Batas
                     </h1>
-                </div>
+                </div> -->
 
                 <div class="max-w-2xl opacity-0 translate-y-10 transition-all duration-1000 delay-500 ease-out" :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'">
-                    <p class="text-gray-600 leading-relaxed text-justify border-l-4 border-indigo-500 pl-6 text-lg md:text-xl font-medium">
-                        "Bersama <span class="text-indigo-700 font-bold">PELTRA</span>, kami menghadirkan standar baru dalam layanan kepelabuhanan. Integrasi sistem cerdas, efisiensi operasional, dan profesionalisme untuk memastikan setiap logistik bermuara pada kemajuan ekonomi Anda."
-                    </p>
                     
                     <div class="mt-8 pl-6 relative" x-data="{ notification: false }">
                         <button 
@@ -84,7 +81,7 @@
                         class="w-full max-w-md h-72 -mt-1 [clip-path:polygon(49%_0%,100%_0%,100%_100%,10%_100%)] opacity-0 translate-x-20 transition-all duration-1000 delay-500 ease-out"
                         :class="shown ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20'"
                     >
-                        <img src="{{ asset('images/kapal2.jpg') }}" class="w-full h-full object-cover">
+                        <img src="{{ asset('images/kapalAboutus1.jpg') }}" class="w-full h-full object-cover">
                     </div>
 
                     <!-- Gambar 3 -->

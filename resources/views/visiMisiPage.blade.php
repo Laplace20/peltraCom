@@ -50,7 +50,7 @@
                 <div class="relative bg-white rounded-[2rem] overflow-hidden shadow-2xl">
                     <div class="grid lg:grid-cols-2">
                         <div class="relative h-64 lg:h-auto overflow-hidden">
-                            <img class="absolute inset-0 w-full h-full object-cover transform hover:scale-105 transition duration-700 ease-out" src="{{ asset('images/kapal2.jpg') }}" alt="Visi Peltra">
+                            <img class="absolute inset-0 w-full h-full object-cover transform hover:scale-105 transition duration-700 ease-out" src="{{ asset('images/kapal3.jpg') }}" alt="Visi Peltra">
                             <div class="absolute inset-0 bg-indigo-900/60 mix-blend-multiply"></div>
                             <div class="absolute inset-0 flex items-center justify-center">
                                 <h2 class="text-6xl font-black text-white/20 tracking-tighter uppercase">Vision</h2>
