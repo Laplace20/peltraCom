@@ -29,6 +29,12 @@ jobs:
         run: |
           npm install
           npm run build
+      
+      - name: 🗑️ Remove heavy folders before sync
+        run: |
+          rm -rf vendor
+          rm -rf node_modules
+          
 
       - name: 📂 Sync Files via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
@@ -49,4 +55,4 @@ jobs:
             phpunit.xml
             storage/
             vendor/
-            .envs
+            .env
