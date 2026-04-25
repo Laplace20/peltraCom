@@ -1,0 +1,48 @@
+name: Deploy Laravel Project
+
+on:
+  push:
+    branches: [ main ] # Jalankan setiap kali ada push ke branch main
+
+jobs:
+  web-deploy:
+    name: Build and Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v3
+
+      - name: ⚡️ Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4' # Sesuaikan dengan versi PHP di Hostinger
+
+      - name: 📥 Install Composer Dependencies
+        run: composer install --no-ansi --no-dev --no-interaction --no-plugins --no-progress --no-scripts --optimize-autoloader
+
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '25.9.0' # Sesuaikan dengan versi Node Anda
+
+      - name: 🔨 Build Assets (Vite)
+        run: |
+          npm install
+          npm run build
+
+      - name: 📂 Sync Files via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          # Path di server Hostinger (biasanya public_html atau subfolder)
+          server-dir: ./public_html/
+          # Kita mengecualikan file yang tidak perlu diupload ke server production
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            **/tests/**
+            .env.example
+            phpunit.xml
