@@ -45,6 +45,6 @@ jobs:
             **/.git*/**
             **/node_modules/**
             **/tests/**
-            .env.example
-            phpunit.xml
             vendor/
+            storage/
+            .env
