@@ -43,7 +43,7 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           # Path di server Hostinger (biasanya public_html atau subfolder)
-          server-dir: public_html/
+          server-dir: domains/royalblue-cobra-658021.hostingersite.com/public_html/
           port: 21
           # Kita mengecualikan file yang tidak perlu diupload ke server production
           exclude: |
