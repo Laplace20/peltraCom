@@ -1,8 +1,6 @@
 <x-landingPageLayout>
-    {{-- SEO Title handled in controller layout normally, but x-slot is fine --}}
     <x-slot:title>{{ $news->title }} - PELTRA News</x-slot>
 
-    {{-- Overwrite default header padding since we have a custom Hero --}}
     <x-slot:header>
         {{-- Empty slot to remove default spacer --}}
     </x-slot:header>
@@ -11,7 +9,7 @@
         
         {{-- HERO SECTION --}}
         <div class="relative w-full h-[60vh] min-h-[500px] flex items-end overflow-hidden">
-            {{-- Background Image with Parallax Effect --}}
+            
             <div class="absolute inset-0 z-0 select-none">
                 @if($news->image)
                     <img 

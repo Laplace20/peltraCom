@@ -1,7 +1,7 @@
 @props(['news', 'activities'])
 
 <section class="py-24 bg-gradient-to-b from-slate-50 to-white w-full overflow-hidden relative" id="updates-section">
-    <!-- Decorative Background Elements -->
+    <!-- Background -->
     <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
         <div class="absolute top-0 right-0 w-96 h-96 bg-indigo-50 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob"></div>
         <div class="absolute bottom-0 left-0 w-96 h-96 bg-teal-50 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob animation-delay-2000"></div>
@@ -12,7 +12,7 @@
         
         <div class="grid lg:grid-cols-12 gap-12">
             
-            <!-- LEFT COLUMN: LATEST NEWS (Occupies 8/12 on large screens) -->
+            <!-- LEFT COLUMN: LATEST NEWS -->
             <div class="lg:col-span-8 flex flex-col">
                 <!-- News Header -->
                 <div class="flex flex-col sm:flex-row justify-between items-end mb-10 border-b border-slate-200 pb-4">
@@ -71,7 +71,7 @@
                 </div>
             </div>
 
-            <!-- RIGHT COLUMN: CSR ACTIVITIES (Occupies 4/12 on large screens) -->
+            <!-- RIGHT COLUMN: CSR ACTIVITIES -->
             <div class="lg:col-span-4 flex flex-col mt-12 lg:mt-0">
                 <!-- CSR Header -->
                 <div class="flex flex-col sm:flex-row justify-between items-end mb-10 border-b border-slate-200 pb-4">
@@ -83,12 +83,12 @@
                     </div>
                 </div>
 
-                <!-- CSR Stack (Vertical List) -->
+                <!-- CSR Stack -->
                 <div class="space-y-6 flex-grow">
                     @forelse($activities as $activity)
                     <!-- Compact Horizontal Card -->
                     <div class="group relative flex bg-white rounded-xl border border-slate-100 shadow-sm overflow-hidden hover:shadow-md transition-all duration-300">
-                        <!-- Image Layout (Left or Top depending on space, fixed width here) -->
+                        <!-- Image Layout -->
                         <div class="w-1/3 min-w-[100px] relative overflow-hidden">
                             <img 
                                 src="{{ $activity->image ? asset('storage/' . $activity->image) : 'https://placehold.co/400x400?text=CSR' }}" 
@@ -117,7 +117,7 @@
                     @endforelse
                 </div>
 
-                <!-- Footer Call to Action for CSR -->
+                <!-- Footer CTA for CSR -->
                 <div class="mt-8 pt-6 border-t border-slate-100">
                     <a href="{{ route('csr.index') }}" class="group flex items-center justify-between w-full p-4 rounded-xl bg-teal-50 hover:bg-teal-100 transition-colors">
                         <span class="font-bold text-teal-700 text-sm">Arsip Kegiatan Sosial</span>

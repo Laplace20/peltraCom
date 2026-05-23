@@ -19,13 +19,13 @@
         .animate-on-scroll { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-out; }
         .is-visible { opacity: 1; transform: translateY(0); }
 
-        /* Rich Text Content Styling */
+        
         .prose blockquote {
             font-style: italic;
             border-left-width: 4px;
             --tw-border-opacity: 1;
             border-color: rgb(99 102 241 / var(--tw-border-opacity)); 
-            background-color: rgb(249 250 251 / 1); /* gray-50 */
+            background-color: rgb(249 250 251 / 1); 
             padding: 1rem;
             border-radius: 0 0.375rem 0.375rem 0;
             margin-top: 1.5rem;
@@ -48,7 +48,7 @@
             font-weight: 700;
         }
         .prose a {
-            color: rgb(79 70 229); /* indigo-600 */
+            color: rgb(79 70 229); 
             text-decoration: underline;
             font-weight: 500;
         }

@@ -22,7 +22,9 @@
                     </h1>
                 </div> -->
 
-                <div class="max-w-2xl opacity-0 translate-y-10 transition-all duration-1000 delay-500 ease-out" :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'">
+                <!-- Button cek jadwal (tidak jadi) -->
+
+                <!-- <div class="max-w-2xl opacity-0 translate-y-10 transition-all duration-1000 delay-500 ease-out" :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'">
                     
                     <div class="mt-8 pl-6 relative" x-data="{ notification: false }">
                         <button 
@@ -30,11 +32,11 @@
                             class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10 transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                         >
                             Cek Jadwal & Booking Tiket
-                            <!-- Icon Calendar/Ticket -->
+                            
                             <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
                         </button>
 
-                        <!-- Toast Notification 'Coming Soon' -->
+                        
                         <div 
                             x-show="notification" 
                             x-transition:enter="transition ease-out duration-300"
@@ -53,7 +55,7 @@
                             <span class="font-medium tracking-wide">Fitur Coming Soon! 🚀</span>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -63,7 +65,7 @@
             <div  class="relative w-full flex flex-col items-end overflow-hidden hidden md:block">
                 
                 
-                <!-- Tumpukan Gambar Diagonal -->
+                <!-- Gambar Diagonal -->
                 <div class="relative flex flex-col items-end" >
                     
                     

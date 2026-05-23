@@ -2,7 +2,7 @@ name: Deploy Laravel Project
 
 on:
   push:
-    branches: [ main ] # Jalankan setiap kali ada push ke branch main
+    branches: [ main ] 
 
 jobs:
   web-deploy:
@@ -15,7 +15,7 @@ jobs:
       - name: ⚡️ Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.4' # Sesuaikan dengan versi PHP di Hostinger
+          php-version: '8.4' 
 
       - name: 📥 Install Composer Dependencies
         run: composer install --no-ansi --no-dev --no-interaction --no-plugins --no-progress --no-scripts --optimize-autoloader
@@ -23,7 +23,7 @@ jobs:
       - name: 🟢 Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '25.9.0' # Sesuaikan dengan versi Node Anda
+          node-version: '25.9.0' 
 
       - name: 🔨 Build Assets (Vite)
         run: |
@@ -42,10 +42,10 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          # Path di server Hostinger (biasanya public_html atau subfolder)
+          
           server-dir: domains/pelabuhanlembarsejahtera.co.id/public_html/
           port: 21
-          # Kita mengecualikan file yang tidak perlu diupload ke server production
+          
           exclude: |
             **/.git*
             **/.git*/**
